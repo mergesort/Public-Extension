@@ -7,14 +7,7 @@ protocol Container {
 }
 
 extension String: Container {} // String already has an `isEmpty` property
-
-// Example with `Array`
-
-extension Array: Container {
-    var isEmpty: Bool {
-        return count == 0
-    }
-}
+extension Array: Container {} // Array already has an `isEmpty` property via `CollectionType`
 
 extension Optional where Wrapped: Container {
     var isNilOrEmpty: Bool {
