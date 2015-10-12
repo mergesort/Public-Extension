@@ -6,5 +6,6 @@
         <page name='Array'/>
         <page name='String'/>
         <page name='UIColor'/>
+        <page name='Optional'/>
     </pages>
 </playground>

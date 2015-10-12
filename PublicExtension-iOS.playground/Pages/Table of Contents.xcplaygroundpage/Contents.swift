@@ -6,5 +6,6 @@ Public Extension (iOS) Table of Contents
 - [String](String)
 - [UIColor](UIColor)
 - [UIEdgeInsets](UIEdgeInsets)
+- [Optional](Optional)
 
 */
