@@ -2,8 +2,9 @@
 
 Public Extension (iOS) Table of Contents
 
-- [UIEdgeInsets](UIEdgeInsets)
 - [Array](Array)
 - [String](String)
+- [UIColor](UIColor)
+- [UIEdgeInsets](UIEdgeInsets)
 
 */
