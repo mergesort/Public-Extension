@@ -21,7 +21,7 @@ extension Optional where Wrapped: Container {
         switch self {
         case .None:
             return true
-        case .Some(let unwrapped):
+        case let unwrapped?:
             return unwrapped.isEmpty
         }
     }
