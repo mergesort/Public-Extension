@@ -13,7 +13,7 @@ extension UIEdgeInsets: ArrayLiteralConvertible {
     }
 }
 
-// Suggested by @al_skipp
+//: Suggested by [@al_skipp](https://twitter.com/al_skipp)
 extension UIEdgeInsets {
     public init(uniform: CGFloat) {
         top = uniform
