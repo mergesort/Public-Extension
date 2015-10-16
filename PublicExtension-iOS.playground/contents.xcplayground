@@ -8,5 +8,6 @@
         <page name='UIColor'/>
         <page name='Optional'/>
         <page name='Range'/>
+        <page name='UIDynamicAnimator'/>
     </pages>
 </playground>

@@ -7,6 +7,7 @@ Public Extension (iOS) Table of Contents
 - [Range](Range)
 - [String](String)
 - [UIColor](UIColor)
+- [UIDynamicAnimator](UIDynamicAnimator)
 - [UIEdgeInsets](UIEdgeInsets)
 
 */
