@@ -4,8 +4,6 @@ import UIKit
 
 extension UIDynamicAnimator {
     func addBehaviors(behaviors: [UIDynamicBehavior]) {
-        behaviors.forEach {
-            addBehavior($0)
-        }
+        behaviors.forEach(addBehavior)
     }
 }
