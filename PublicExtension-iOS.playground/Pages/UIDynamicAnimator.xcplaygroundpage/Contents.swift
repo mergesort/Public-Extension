@@ -5,7 +5,7 @@ import UIKit
 extension UIDynamicAnimator {
     func addBehaviors(behaviors: [UIDynamicBehavior]) {
         behaviors.forEach {
-            self.addBehavior($0)
+            addBehavior($0)
         }
     }
 }
