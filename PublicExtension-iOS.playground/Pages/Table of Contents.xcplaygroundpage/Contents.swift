@@ -9,5 +9,6 @@ Public Extension (iOS) Table of Contents
 - [UIColor](UIColor)
 - [UIDynamicAnimator](UIDynamicAnimator)
 - [UIEdgeInsets](UIEdgeInsets)
+- [UIView](UIView)
 
 */
