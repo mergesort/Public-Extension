@@ -10,5 +10,6 @@
         <page name='Range'/>
         <page name='UIDynamicAnimator'/>
         <page name='UIView'/>
+        <page name='UITableView'/>
     </pages>
 </playground>
