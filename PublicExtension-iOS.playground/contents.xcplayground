@@ -11,5 +11,6 @@
         <page name='UIDynamicAnimator'/>
         <page name='UIView'/>
         <page name='UITableView'/>
+        <page name='Int'/>
     </pages>
 </playground>

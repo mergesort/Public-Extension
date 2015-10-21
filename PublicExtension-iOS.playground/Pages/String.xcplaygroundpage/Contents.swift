@@ -5,7 +5,7 @@ import UIKit
 // MARK: - StringInterpolationConvertible for Optional<T>
 
 extension String {
-    init<T>(stringInterpolationSegment expr: Optional<T>) {
+    init<T>(stringInterpolationSegment expr: T?) {
         if let expr = expr {
             self = "\(expr)?"
         } else {

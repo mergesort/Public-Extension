@@ -3,6 +3,7 @@
 Public Extension (iOS) Table of Contents
 
 - [Array](Array)
+- [Int](Int)
 - [Optional](Optional)
 - [Range](Range)
 - [String](String)
