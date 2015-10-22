@@ -13,3 +13,17 @@ extension String {
         }
     }
 }
+
+// MARK: - Date Formatting
+
+extension String {
+    func parseDate(format: String = "yyyy-MM-dd") -> NSDate? {
+        // NSDateFormatter initialization is expensive, a shared formatter should be used for common formattings
+        let formatter = NSDateFormatter()
+
+        formatter.timeZone = .defaultTimeZone()
+        formatter.dateFormat = format
+
+        return formatter.dateFromString(self)
+    }
+}

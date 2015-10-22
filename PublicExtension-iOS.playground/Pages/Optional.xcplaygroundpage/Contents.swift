@@ -11,11 +11,6 @@ extension Array: Container {} // Array already has an `isEmpty` property via `Co
 
 extension Optional where Wrapped: Container {
     var isNilOrEmpty: Bool {
-        switch self {
-        case .None:
-            return true
-        case let unwrapped?:
-            return unwrapped.isEmpty
-        }
+        return self?.isEmpty ?? true
     }
 }
