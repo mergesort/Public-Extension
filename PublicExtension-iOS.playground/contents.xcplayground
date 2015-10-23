@@ -12,5 +12,6 @@
         <page name='UIView'/>
         <page name='UITableView'/>
         <page name='Int'/>
+        <page name='UIImage'/>
     </pages>
 </playground>
