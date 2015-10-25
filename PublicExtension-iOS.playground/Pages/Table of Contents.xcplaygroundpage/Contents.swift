@@ -3,6 +3,7 @@
 Public Extension (iOS) Table of Contents
 
 - [Array](Array)
+- [CGSize](CGSize)
 - [Int](Int)
 - [Optional](Optional)
 - [Range](Range)
