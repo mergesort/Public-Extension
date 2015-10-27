@@ -18,6 +18,6 @@ extension Int {
 
 extension Int {
     static func random(from from: Int, to: Int) -> Int {
-        return from + (Int(arc4random()) % (to - from))
+        return from + Int(arc4random_uniform(UInt32(to - from)))
     }
 }
