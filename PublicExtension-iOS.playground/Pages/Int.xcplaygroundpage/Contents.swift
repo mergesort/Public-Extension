@@ -12,7 +12,7 @@ extension Int {
     }
 }
 
-// MARK: - Randon `Int` in specific bounds
+// MARK: - Random `Int` in specific bounds
 
 //: From the QuickCheck chapter in [Functional Programming in Swift](https://www.objc.io/books/fpinswift/)!
 
