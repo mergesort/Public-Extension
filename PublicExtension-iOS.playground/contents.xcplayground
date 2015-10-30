@@ -14,5 +14,6 @@
         <page name='Int'/>
         <page name='UIImage'/>
         <page name='CGSize'/>
+        <page name='NSTimer'/>
     </pages>
 </playground>
