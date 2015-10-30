@@ -6,6 +6,7 @@ Public Extension (iOS) Table of Contents
 - [CGSize](CGSize)
 - [Int](Int)
 - [Optional](Optional)
+- [Playground%20Related](Playground%20Related)
 - [NSTimer](NSTimer)
 - [Range](Range)
 - [String](String)
