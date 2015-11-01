@@ -8,7 +8,7 @@ Public Extension (iOS) Table of Contents
 - [Int](Int)
 - [Optional](Optional)
 - [Playground%20Related](Playground%20Related)
-- [NSOperation](NSOperation)
+- [NSOperationQueue](NSOperationQueue)
 - [NSTimer](NSTimer)
 - [Range](Range)
 - [String](String)

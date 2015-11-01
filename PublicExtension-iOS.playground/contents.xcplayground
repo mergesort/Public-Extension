@@ -17,6 +17,6 @@
         <page name='NSTimer'/>
         <page name='Playground Related'/>
         <page name='ErrorType'/>
-        <page name='NSOperation'/>
+        <page name='NSOperationQueue'/>
     </pages>
 </playground>
