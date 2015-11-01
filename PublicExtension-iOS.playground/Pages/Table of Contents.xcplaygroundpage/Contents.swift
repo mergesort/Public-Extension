@@ -4,9 +4,11 @@ Public Extension (iOS) Table of Contents
 
 - [Array](Array)
 - [CGSize](CGSize)
+- [ErrorType](ErrorType)
 - [Int](Int)
 - [Optional](Optional)
 - [Playground%20Related](Playground%20Related)
+- [NSOperation](NSOperation)
 - [NSTimer](NSTimer)
 - [Range](Range)
 - [String](String)

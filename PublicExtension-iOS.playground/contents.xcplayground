@@ -16,5 +16,7 @@
         <page name='CGSize'/>
         <page name='NSTimer'/>
         <page name='Playground Related'/>
+        <page name='ErrorType'/>
+        <page name='NSOperation'/>
     </pages>
 </playground>
