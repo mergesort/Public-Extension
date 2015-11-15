@@ -12,6 +12,7 @@ Public Extension (iOS) Table of Contents
 - [NSTimer](NSTimer)
 - [Range](Range)
 - [String](String)
+- [UICollectionView](UICollectionView)
 - [UIColor](UIColor)
 - [UIDynamicAnimator](UIDynamicAnimator)
 - [UIEdgeInsets](UIEdgeInsets)
