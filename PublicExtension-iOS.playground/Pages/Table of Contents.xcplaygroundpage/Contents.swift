@@ -16,6 +16,7 @@ Public Extension (iOS) Table of Contents
 - [UIDynamicAnimator](UIDynamicAnimator)
 - [UIEdgeInsets](UIEdgeInsets)
 - [UIImage](UIImage)
+- [UIScrollView](UIScrollView)
 - [UITableView](UITableView)
 - [UIView](UIView)
 

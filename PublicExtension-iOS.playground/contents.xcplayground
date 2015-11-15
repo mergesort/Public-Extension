@@ -18,5 +18,6 @@
         <page name='Playground Related'/>
         <page name='ErrorType'/>
         <page name='NSOperationQueue'/>
+        <page name='UIScrollView'/>
     </pages>
 </playground>
