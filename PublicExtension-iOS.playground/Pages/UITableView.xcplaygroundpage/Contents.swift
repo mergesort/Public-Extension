@@ -8,8 +8,23 @@ protocol Reusable: class {
 }
 
 extension UITableView {
-    // Allowing UITableView class registration with Reusable
-    func registerReusableClass(cellClass: Reusable.Type) {
+    func registerReusable<T: Reusable>(cellClass: T.Type) {
         registerClass(cellClass, forCellReuseIdentifier: cellClass.reuseIdentifier)
+    }
+
+    func dequeueReusable<T: Reusable>(cellClass: T.Type) -> T {
+        guard let cell = dequeueReusableCellWithIdentifier(cellClass.reuseIdentifier) as? T else {
+            fatalError("Misconfigured cell type, \(cellClass)!")
+        }
+
+        return cell
+    }
+
+    func dequeueReusable<T: Reusable>(cellClass: T.Type, forIndexPath indexPath: NSIndexPath) -> T {
+        guard let cell = dequeueReusableCellWithIdentifier(cellClass.reuseIdentifier, forIndexPath: indexPath) as? T else {
+            fatalError("Misconfigured cell type, \(cellClass)!")
+        }
+
+        return cell
     }
 }
