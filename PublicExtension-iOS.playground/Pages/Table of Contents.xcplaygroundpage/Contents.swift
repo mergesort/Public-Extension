@@ -4,6 +4,7 @@ Public Extension (iOS) Table of Contents
 
 - [Array](Array)
 - [CGSize](CGSize)
+- [CollectionType](CollectionType)
 - [ErrorType](ErrorType)
 - [Int](Int)
 - [Optional](Optional)

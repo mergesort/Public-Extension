@@ -20,5 +20,6 @@
         <page name='NSOperationQueue'/>
         <page name='UIScrollView'/>
         <page name='UICollectionView'/>
+        <page name='CollectionType'/>
     </pages>
 </playground>
