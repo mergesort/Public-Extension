@@ -21,5 +21,6 @@
         <page name='UIScrollView'/>
         <page name='UICollectionView'/>
         <page name='CollectionType'/>
+        <page name='Dictionary'/>
     </pages>
 </playground>
