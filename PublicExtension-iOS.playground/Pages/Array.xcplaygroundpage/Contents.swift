@@ -4,4 +4,9 @@ extension Array {
     subscript(safe index: Index) -> Element? {
         return index < endIndex ? self[index] : nil
     }
+
+    init(withCapacity capacity: Int) {
+        self.init()
+        reserveCapacity(capacity)
+    }
 }
