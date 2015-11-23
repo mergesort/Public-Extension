@@ -10,14 +10,14 @@ extension Int {
             closure()
         }
     }
-}
 
-// MARK: - Random `Int` in specific bounds
-
-//: From the QuickCheck chapter in [Functional Programming in Swift](https://www.objc.io/books/fpinswift/)!
-
-extension Int {
+    // MARK: - Random `Int` in specific bounds
+    //: From the QuickCheck chapter in [Functional Programming in Swift](https://www.objc.io/books/fpinswift/)!
     static func random(from from: Int, to: Int) -> Int {
         return from + Int(arc4random_uniform(UInt32(to - from)))
+    }
+
+    func digits() -> [Int] {
+        return String(self).characters.flatMap { Int(String($0)) }
     }
 }
