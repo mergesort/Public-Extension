@@ -14,4 +14,15 @@ extension Dictionary {
             $0 + [$1.0: transform($1.1)]
         }
     }
+
+    func groupBy<T>(@noescape groupBy: (Key, Value) -> T) -> [T: [Value]] {
+        var result: [T: [Value]] = [:]
+
+        self.forEach {
+            let groupKey = groupBy($0, $1)
+            result[groupKey] = (result[groupKey] ?? []) + [$1]
+        }
+
+        return result
+    }
 }
