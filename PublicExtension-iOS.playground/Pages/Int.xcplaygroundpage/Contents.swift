@@ -17,7 +17,7 @@ extension Int {
         return from + Int(arc4random_uniform(UInt32(to - from)))
     }
 
-    func digits() -> [Int] {
+    var digits: [Int] {
         return String(self).characters.flatMap { Int(String($0)) }
     }
 }
