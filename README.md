@@ -20,6 +20,6 @@ If you have any suggested extensions, please DM them on Twitter with a [gist](ht
 
 ## Donate
 
-I run Public Extension in my free time! If you feel like giving back to contributing to the cause, BTC is the best way! Here is my [Coinbase profile](https://www.coinbase.com/jasdev).   
+I run Public Extension in my free time! If you feel like contributing to the cause, BTC is the best way! Here is my [Coinbase profile](https://www.coinbase.com/jasdev).   
 
 :blue_heart:
