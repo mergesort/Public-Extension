@@ -10,6 +10,7 @@ Public Extension (iOS) Table of Contents
 - [Int](Int)
 - [Optional](Optional)
 - [Playground%20Related](Playground%20Related)
+- [NSDate](NSDate)
 - [NSOperationQueue](NSOperationQueue)
 - [NSTimer](NSTimer)
 - [Range](Range)

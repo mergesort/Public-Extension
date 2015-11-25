@@ -22,5 +22,6 @@
         <page name='UICollectionView'/>
         <page name='CollectionType'/>
         <page name='Dictionary'/>
+        <page name='NSDate'/>
     </pages>
 </playground>
