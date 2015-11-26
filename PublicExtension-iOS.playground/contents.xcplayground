@@ -23,5 +23,6 @@
         <page name='CollectionType'/>
         <page name='Dictionary'/>
         <page name='NSDate'/>
+        <page name='UIWindow'/>
     </pages>
 </playground>

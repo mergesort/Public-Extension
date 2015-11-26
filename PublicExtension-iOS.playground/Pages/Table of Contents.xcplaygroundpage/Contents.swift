@@ -23,5 +23,6 @@ Public Extension (iOS) Table of Contents
 - [UIScrollView](UIScrollView)
 - [UITableView](UITableView)
 - [UIView](UIView)
+- [UIWindow](UIWindow)
 
 */
