@@ -2,8 +2,6 @@
 
 import UIKit
 
-// MARK: - StringInterpolationConvertible for Optional<T>
-
 extension String {
     init<T>(stringInterpolationSegment expr: T?) {
         if let expr = expr {
@@ -14,8 +12,6 @@ extension String {
     }
 }
 
-// MARK: - Date Formatting
-
 extension String {
     func parseDate(format: String = "yyyy-MM-dd") -> NSDate? {
         // NSDateFormatter initialization is expensive, a shared formatter should be used for common formattings
@@ -25,5 +21,19 @@ extension String {
         formatter.dateFormat = format
 
         return formatter.dateFromString(self)
+    }
+}
+
+extension String {
+    /**
+    Computes the reading time of `self`
+    
+    - parameter readingSpeed: Average reading speed in words per minute. Defaults to 250.
+     
+    - returns: Number of minutes to read `self`
+    */
+    func computeReadingTime(readingSpeed: Double = 250) -> Double {
+        let words = self.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).filter { !$0.isEmpty }
+        return Double(words.count) / readingSpeed
     }
 }
