@@ -18,7 +18,7 @@ extension Dictionary {
     func groupBy<T>(@noescape groupBy: (Key, Value) -> T) -> [T: [Value]] {
         var result: [T: [Value]] = [:]
 
-        self.forEach {
+        forEach {
             let groupKey = groupBy($0, $1)
             result[groupKey] = (result[groupKey] ?? []) + [$1]
         }
