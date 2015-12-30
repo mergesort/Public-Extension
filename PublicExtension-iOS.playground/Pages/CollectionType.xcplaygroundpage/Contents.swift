@@ -28,3 +28,14 @@ extension CollectionType where
         return result
     }
 }
+
+//: Credit to [@brentdax](https://twitter.com/brentdax)
+extension CollectionType where Index: Comparable {
+    subscript(safe index: Index) -> Generator.Element? {
+        guard index >= startIndex && index < endIndex else {
+            return nil
+        }
+        
+        return self[index]
+    }
+}
