@@ -52,3 +52,9 @@ extension NSString {
         return self as String
     }
 }
+
+extension String {
+    var trimmed: String {
+        return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
+    }
+}
