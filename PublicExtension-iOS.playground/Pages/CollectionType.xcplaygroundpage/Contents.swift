@@ -39,3 +39,10 @@ extension CollectionType where Index: Comparable {
         return self[index]
     }
 }
+
+//: Credit to [@UINT_MIN](https://twitter.com/UINT_MIN)
+extension CollectionType where Generator.Element: Comparable {
+    var maxIndex: Index? {
+        return indices.maxElement { self[$0] < self[$1] }
+    }
+}
