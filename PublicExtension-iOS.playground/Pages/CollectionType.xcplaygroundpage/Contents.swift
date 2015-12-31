@@ -46,3 +46,14 @@ extension CollectionType where Generator.Element: Comparable {
         return indices.maxElement { self[$0] < self[$1] }
     }
 }
+
+//: Credit to [@oisdk](https://twitter.com/oisdk)
+extension CollectionType where Index: BidirectionalIndexType {
+    func lastIndexOf(@noescape isElement: Generator.Element -> Bool) -> Index? {
+        for index in indices.reverse() where isElement(self[index]) {
+            return index
+        }
+        
+        return nil
+    }
+}
