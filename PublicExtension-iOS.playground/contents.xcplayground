@@ -26,5 +26,6 @@
         <page name='UIWindow'/>
         <page name='Miscellaneous'/>
         <page name='AbsoluteValuable'/>
+        <page name='NSObject'/>
     </pages>
 </playground>
