@@ -27,5 +27,6 @@
         <page name='Miscellaneous'/>
         <page name='AbsoluteValuable'/>
         <page name='NSObject'/>
+        <page name='NSUserDefaults'/>
     </pages>
 </playground>

@@ -16,6 +16,7 @@ Public Extension (iOS) Table of Contents
 - [NSObject](NSObject)
 - [NSOperationQueue](NSOperationQueue)
 - [NSTimer](NSTimer)
+- [NSUserDefaults](NSUserDefaults)
 - [Range](Range)
 - [String](String)
 - [UICollectionView](UICollectionView)
