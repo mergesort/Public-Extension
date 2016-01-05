@@ -54,7 +54,7 @@ extension NSString {
 }
 
 extension String {
-    var trimmed: String {
+    var trimmedString: String {
         return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
     }
 }
