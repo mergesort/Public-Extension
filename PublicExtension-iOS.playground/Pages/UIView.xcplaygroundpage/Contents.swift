@@ -14,4 +14,9 @@ extension UIView {
     var frameWidth: CGFloat {
         return frame.width
     }
+    
+    convenience init(translatesAutoresizingMaskIntoConstraints: Bool) {
+        self.init()
+        self.translatesAutoresizingMaskIntoConstraints = translatesAutoresizingMaskIntoConstraints
+    }
 }
