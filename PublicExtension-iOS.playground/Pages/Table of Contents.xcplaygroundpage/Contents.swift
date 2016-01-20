@@ -18,6 +18,7 @@ Public Extension (iOS) Table of Contents
 - [NSTimer](NSTimer)
 - [NSUserDefaults](NSUserDefaults)
 - [Range](Range)
+- [Result](Result)
 - [String](String)
 - [UICollectionView](UICollectionView)
 - [UIColor](UIColor)

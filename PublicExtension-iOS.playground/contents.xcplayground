@@ -1,2 +1,33 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<playground version='6.0' target-platform='ios' display-mode='raw'/>
+<playground version='6.0' target-platform='ios' display-mode='raw'>
+    <pages>
+        <page name='AbsoluteValuable'/>
+        <page name='Array'/>
+        <page name='CGSize'/>
+        <page name='CollectionType'/>
+        <page name='Dictionary'/>
+        <page name='ErrorType'/>
+        <page name='Int'/>
+        <page name='Miscellaneous'/>
+        <page name='NSDate'/>
+        <page name='NSObject'/>
+        <page name='NSOperationQueue'/>
+        <page name='NSTimer'/>
+        <page name='NSUserDefaults'/>
+        <page name='Optional'/>
+        <page name='Playground Related'/>
+        <page name='Range'/>
+        <page name='String'/>
+        <page name='Table of Contents'/>
+        <page name='UICollectionView'/>
+        <page name='UIColor'/>
+        <page name='UIDynamicAnimator'/>
+        <page name='UIEdgeInsets'/>
+        <page name='UIImage'/>
+        <page name='UIScrollView'/>
+        <page name='UITableView'/>
+        <page name='UIView'/>
+        <page name='UIWindow'/>
+        <page name='Result'/>
+    </pages>
+</playground>
