@@ -2,8 +2,6 @@
 
 import Foundation
 
-// MARK: - Repeat block
-
 extension Int {
     func repeatClosure(closure: () -> Void) {
         (0..<self).forEach { _ in
@@ -19,5 +17,13 @@ extension Int {
 
     var digits: [Int] {
         return String(self).characters.flatMap { Int(String($0)) }
+    }
+}
+
+extension Int {
+    func gcd(other: Int) -> Int {
+        guard other != 0 else { return abs(self) }
+
+        return abs(other.gcd(self % other))
     }
 }

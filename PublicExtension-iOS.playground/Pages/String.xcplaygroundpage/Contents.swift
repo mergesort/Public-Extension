@@ -37,3 +37,24 @@ extension String {
         return Double(words.count) / readingSpeed
     }
 }
+
+//: Credit to [@ericasadun](https://twitter.com/ericasadun)
+extension String {
+    // Force String to NSString
+    var ns: NSString {
+        return self as NSString
+    }
+}
+
+extension NSString {
+    // Force NSString to String
+    var swift: String {
+        return self as String
+    }
+}
+
+extension String {
+    var trimmedString: String {
+        return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
+    }
+}

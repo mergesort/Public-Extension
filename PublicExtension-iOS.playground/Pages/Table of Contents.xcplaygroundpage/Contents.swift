@@ -2,6 +2,7 @@
 
 Public Extension (iOS) Table of Contents
 
+- [AbsoluteValuable](AbsoluteValuable)
 - [Array](Array)
 - [CGSize](CGSize)
 - [CollectionType](CollectionType)
@@ -10,10 +11,14 @@ Public Extension (iOS) Table of Contents
 - [Int](Int)
 - [Optional](Optional)
 - [Playground%20Related](Playground%20Related)
+- [Miscellaneous](Miscellaneous)
 - [NSDate](NSDate)
+- [NSObject](NSObject)
 - [NSOperationQueue](NSOperationQueue)
 - [NSTimer](NSTimer)
+- [NSUserDefaults](NSUserDefaults)
 - [Range](Range)
+- [Result](Result)
 - [String](String)
 - [UICollectionView](UICollectionView)
 - [UIColor](UIColor)

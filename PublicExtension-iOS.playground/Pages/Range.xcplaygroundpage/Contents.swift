@@ -11,3 +11,12 @@ extension Range {
         }
     }
 }
+
+//: Credit to [@AirspeedSwift](https://twitter.com/AirspeedSwift)
+extension Range {
+    var mid: Element {
+        return startIndex.advancedBy(
+            startIndex.distanceTo(endIndex) / 2
+        )
+    }
+}

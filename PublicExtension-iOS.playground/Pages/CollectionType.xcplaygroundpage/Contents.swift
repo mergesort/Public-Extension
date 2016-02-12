@@ -29,7 +29,36 @@ extension CollectionType where
     }
 }
 
-//: By [@airspeedswift](https://twitter.com/airspeedswift)
+//: Credit to [@brentdax](https://twitter.com/brentdax)
+extension CollectionType where Index: Comparable {
+    subscript(safe index: Index) -> Generator.Element? {
+        guard index >= startIndex && index < endIndex else {
+            return nil
+        }
+        
+        return self[index]
+    }
+}
+
+//: Credit to [@UINT_MIN](https://twitter.com/UINT_MIN)
+extension CollectionType where Generator.Element: Comparable {
+    var maxIndex: Index? {
+        return indices.maxElement { self[$0] < self[$1] }
+    }
+}
+
+//: Credit to [@oisdk](https://twitter.com/oisdk)
+extension CollectionType where Index: BidirectionalIndexType {
+    func lastIndexOf(@noescape isElement: Generator.Element -> Bool) -> Index? {
+        for index in indices.reverse() where isElement(self[index]) {
+            return index
+        }
+        
+        return nil
+    }
+}
+
+//: Credit to [@airspeedswift](https://twitter.com/airspeedswift)
 extension CollectionType
     where
         Generator.Element: Equatable,
@@ -41,7 +70,7 @@ extension CollectionType
                 Other.Index: RandomAccessIndexType,
                 Other.Index.Distance == Index.Distance,
                 Other.Generator.Element == Generator.Element
-         >(pat: Other) -> Index? {
+        >(pat: Other) -> Index? {
             guard !isEmpty && pat.count <= count else { return nil }
             
             for i in startIndex...endIndex.advancedBy(-pat.count) {
@@ -51,5 +80,7 @@ extension CollectionType
             }
             
             return nil
-    }
+        }
 }
+
+[1, 2, 3].search([2, 3]) // Results in 1
