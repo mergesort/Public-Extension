@@ -82,5 +82,3 @@ extension CollectionType
             return nil
         }
 }
-
-[1, 2, 3].search([2, 3]) // Results in 1
