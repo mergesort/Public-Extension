@@ -28,3 +28,28 @@ extension CollectionType where
         return result
     }
 }
+
+//: By [@airspeedswift](https://twitter.com/airspeedswift)
+extension CollectionType
+    where
+        Generator.Element: Equatable,
+        Index: RandomAccessIndexType,
+        SubSequence.Generator.Element == Generator.Element {
+    func search<
+            Other: CollectionType
+            where
+                Other.Index: RandomAccessIndexType,
+                Other.Index.Distance == Index.Distance,
+                Other.Generator.Element == Generator.Element
+         >(pat: Other) -> Index? {
+            guard !isEmpty && pat.count <= count else { return nil }
+            
+            for i in startIndex...endIndex.advancedBy(-pat.count) {
+                if self.suffixFrom(i).startsWith(pat) {
+                    return i
+                }
+            }
+            
+            return nil
+    }
+}
