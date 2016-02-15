@@ -29,5 +29,6 @@
         <page name='UIView'/>
         <page name='UIWindow'/>
         <page name='Result'/>
+        <page name='NSRange'/>
     </pages>
 </playground>

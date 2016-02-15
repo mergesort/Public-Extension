@@ -15,6 +15,7 @@ Public Extension (iOS) Table of Contents
 - [NSDate](NSDate)
 - [NSObject](NSObject)
 - [NSOperationQueue](NSOperationQueue)
+- [NSRange](NSRange)
 - [NSTimer](NSTimer)
 - [NSUserDefaults](NSUserDefaults)
 - [Range](Range)
