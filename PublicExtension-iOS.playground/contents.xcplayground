@@ -30,7 +30,6 @@
         <page name='NSUserDefaults'/>
         <page name='Result'/>
         <page name='SequenceType'/>
-        <page name='Result'/>
         <page name='NSRange'/>
     </pages>
 </playground>
