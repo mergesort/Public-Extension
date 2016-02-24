@@ -14,7 +14,7 @@ extension NSUserDefaults {
 }
 
 extension NSUserDefaults {
-    subscript(key: String) -> AnyObject? {
+    @nonobjc subscript(key: String) -> AnyObject? {
         get {
             return objectForKey(key)
         }
@@ -24,5 +24,15 @@ extension NSUserDefaults {
         }
     }
     
-    // For a generalization of this, see https://github.com/radex/SwiftyUserDefaults
+    @nonobjc subscript(key: String) -> Bool {
+        get {
+            return boolForKey(key)
+        }
+        
+        set {
+            setBool(newValue, forKey: key)
+        }
+    }
+    
+    // etc.
 }
