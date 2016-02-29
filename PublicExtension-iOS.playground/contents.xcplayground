@@ -24,7 +24,12 @@
         <page name='Dictionary'/>
         <page name='NSDate'/>
         <page name='UIWindow'/>
+        <page name='AbsoluteValuable'/>
+        <page name='Miscellaneous'/>
+        <page name='NSObject'/>
+        <page name='NSUserDefaults'/>
         <page name='Result'/>
+        <page name='SequenceType'/>
         <page name='NSRange'/>
     </pages>
 </playground>

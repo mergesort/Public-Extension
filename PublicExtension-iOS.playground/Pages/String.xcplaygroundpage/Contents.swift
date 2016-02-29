@@ -58,3 +58,9 @@ extension String {
         return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
     }
 }
+
+extension String {
+    var reversedString: String {
+        return String(characters.reverse())
+    }
+}
