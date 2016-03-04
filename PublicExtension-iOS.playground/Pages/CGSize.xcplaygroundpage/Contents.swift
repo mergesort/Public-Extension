@@ -10,7 +10,6 @@ Enum raw values must conform to `Equatable` and be literal convertible from
 */
 
 //: Inspired by [@terhechte](https://twitter.com/terhechte)
-
 extension CGSize: StringLiteralConvertible {
     public init(stringLiteral value: String) {
         let size = CGSizeFromString(value)
@@ -25,5 +24,16 @@ extension CGSize: StringLiteralConvertible {
     public init(unicodeScalarLiteral value: String) {
         let size = CGSizeFromString(value)
         self.init(width: size.width, height: size.height)
+    }
+}
+
+//: Inspired by [@soffes](https://twitter.com/soffes)
+extension CGSize {
+    func aspectFit(boundingSize: CGSize) -> CGSize {
+        let widthRatio = boundingSize.width / width
+        let heightRatio = boundingSize.height / height
+        let minRatio = min(widthRatio, heightRatio)
+        
+        return CGSize(width: width*minRatio, height: height*minRatio)
     }
 }
