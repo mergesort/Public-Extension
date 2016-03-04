@@ -30,10 +30,7 @@ extension CGSize: StringLiteralConvertible {
 //: Inspired by [@soffes](https://twitter.com/soffes)
 extension CGSize {
     func aspectFit(boundingSize: CGSize) -> CGSize {
-        let widthRatio = boundingSize.width / width
-        let heightRatio = boundingSize.height / height
-        let minRatio = min(widthRatio, heightRatio)
-
+        let minRatio = min(boundingSize.width / width, boundingSize.height / height)
         return CGSize(width: width*minRatio, height: height*minRatio)
     }
 }
