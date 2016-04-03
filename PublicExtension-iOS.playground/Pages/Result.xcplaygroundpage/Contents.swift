@@ -7,6 +7,18 @@ enum Result<T, Error: ErrorType> {
     // See full implementation at https://github.com/antitypical/Result
 }
 
+//: Credit to [@pearapps](https://twitter.com/pearapps)
+extension Result {
+    func peek() -> T? {
+        switch self {
+        case let .Success(result):
+            return result
+        default:
+            return nil
+        }
+    }
+}
+
 extension Result {
     func dematerialize() throws -> T {
         switch self {
