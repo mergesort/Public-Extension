@@ -20,7 +20,6 @@ Public Extension (iOS) Table of Contents
 - [NSUserDefaults](NSUserDefaults)
 - [Range](Range)
 - [Result](Result)
-- [SequenceType](SequenceType)
 - [String](String)
 - [UICollectionView](UICollectionView)
 - [UIColor](UIColor)

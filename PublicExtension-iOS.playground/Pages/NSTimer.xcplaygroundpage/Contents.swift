@@ -2,8 +2,7 @@
 
 import Foundation
 
-//: By [Nate Cook](https://twitter.com/nnnnnnnn)
-
+//: Credit to [Nate Cook](https://twitter.com/nnnnnnnn)
 extension NSTimer {
     class func schedule(delay delay: NSTimeInterval, handler: NSTimer! -> Void) -> NSTimer {
         let fireDate = delay + CFAbsoluteTimeGetCurrent()

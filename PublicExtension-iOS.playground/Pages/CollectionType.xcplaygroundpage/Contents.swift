@@ -22,7 +22,7 @@ extension CollectionType where
             })
 
             result.append(transposed)
-            currentColumnIndex++
+            currentColumnIndex += 1
         }
         
         return result

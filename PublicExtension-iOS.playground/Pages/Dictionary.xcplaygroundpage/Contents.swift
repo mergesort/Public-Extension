@@ -1,6 +1,7 @@
 //: [Table of Contents](Table%20of%20Contents)
 
-func +<U, V>(var lhs: [U: V], rhs: [U: V]) -> [U: V] {
+func +<U, V>(lhs: [U: V], rhs: [U: V]) -> [U: V] {
+    var lhs = lhs
     for (key, value) in rhs {
         lhs[key] = value
     }

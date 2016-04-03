@@ -29,7 +29,6 @@
         <page name='NSObject'/>
         <page name='NSUserDefaults'/>
         <page name='Result'/>
-        <page name='SequenceType'/>
         <page name='NSRange'/>
         <page name='UIOffset'/>
     </pages>
