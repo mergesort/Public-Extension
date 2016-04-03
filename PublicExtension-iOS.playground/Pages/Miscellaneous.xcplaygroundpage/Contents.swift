@@ -9,3 +9,11 @@ func apply<T, U>(transform: inout T -> U -> ()) -> T -> U -> T {
         }
     }
 }
+
+protocol SomeProtocol {
+    associatedtype Container: SequenceType
+}
+
+extension SomeProtocol {
+    typealias Element = Container.Generator.Element
+}
