@@ -14,3 +14,15 @@ extension Optional where Wrapped: Container {
         return self?.isEmpty ?? true
     }
 }
+
+//: Credit to [@pearapps](https://twitter.com/pearapps)
+extension Optional {
+    func iff(@noescape f: Wrapped -> Void) {
+        switch self {
+        case let .Some(value):
+            f(value)
+        default:
+            return
+        }
+    }
+}
