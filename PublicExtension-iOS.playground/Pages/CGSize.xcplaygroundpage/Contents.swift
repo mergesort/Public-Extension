@@ -34,3 +34,14 @@ extension CGSize {
         return CGSize(width: width*minRatio, height: height*minRatio)
     }
 }
+
+//: Credit to [@rolandleth](https://twitter.com/rolandleth)
+extension CGSize {
+    var delta: CGFloat {
+        return 0.1 // Customize to your needs
+    }
+    
+    var isCompact: Bool { return height > width + delta }
+    var isWide: Bool { return width > height + delta }
+    var isSquare: Bool { return abs(width - height) < delta }
+}
