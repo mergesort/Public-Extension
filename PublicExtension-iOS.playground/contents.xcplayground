@@ -31,5 +31,6 @@
         <page name='Result'/>
         <page name='NSRange'/>
         <page name='UIOffset'/>
+        <page name='NSDateFormatter'/>
     </pages>
 </playground>

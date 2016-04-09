@@ -13,6 +13,7 @@ Public Extension (iOS) Table of Contents
 - [Playground%20Related](Playground%20Related)
 - [Miscellaneous](Miscellaneous)
 - [NSDate](NSDate)
+- [NSDateFormatter](NSDateFormatter)
 - [NSObject](NSObject)
 - [NSOperationQueue](NSOperationQueue)
 - [NSRange](NSRange)
