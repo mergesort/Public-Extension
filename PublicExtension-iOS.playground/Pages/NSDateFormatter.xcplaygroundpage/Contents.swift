@@ -10,5 +10,3 @@ extension NSDateFormatter {
         dateFormat = format
     }
 }
-
-let formatter = NSDateFormatter(format: "yyyy")
