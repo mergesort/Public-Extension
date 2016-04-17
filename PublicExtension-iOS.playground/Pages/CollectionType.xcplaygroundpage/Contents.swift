@@ -82,3 +82,17 @@ extension CollectionType
             return nil
         }
 }
+
+//: Inspired by [@irace](https://twitter.com/irace)
+extension CollectionType where
+    Generator.Element: Equatable,
+    Index: BidirectionalIndexType {
+    
+    func intersperse(@autoclosure producer: () -> Generator.Element) -> [Generator.Element] {
+        return reduce([]) { accumulated, next in
+            return accumulated +
+                [next] +
+                (next != last! ? [producer()] : [])
+        }
+    }
+}
