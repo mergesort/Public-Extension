@@ -8,7 +8,7 @@ To follow along, each extension will be tweeted from [@PublicExtension](https://
 
 ## Structure
 
-Each extension will be added to the Playground files in this repository (Public-Extension-[iOS|OSX].playground). Types that are being extended will have their own page!
+Each extension will be added to the Playground file in this repository. Types that are being extended will have their own page!
 
 To view the playground with rendered documentation, make sure to check 'Render Documentation' in the Utilities pane of Xcode!
 
@@ -17,9 +17,5 @@ To view the playground with rendered documentation, make sure to check 'Render D
 ## Suggestions
 
 If you have any suggested extensions, please DM them on Twitter with a [gist](https://gist.github.com)!
-
-## Donate
-
-I run Public Extension in my free time! If you feel like contributing to the cause, BTC is the best way! Here is my [Coinbase profile](https://www.coinbase.com/jasdev).   
 
 :blue_heart:
