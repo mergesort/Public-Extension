@@ -17,3 +17,7 @@ protocol SomeProtocol {
 extension SomeProtocol {
     typealias Element = Container.Generator.Element
 }
+
+func fatalError<T: protocol<CustomStringConvertible, ErrorType>>(error: T) {
+    fatalError(error.description)
+}
