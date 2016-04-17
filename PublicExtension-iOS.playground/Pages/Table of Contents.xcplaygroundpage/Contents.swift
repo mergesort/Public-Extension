@@ -26,6 +26,7 @@ Public Extension (iOS) Table of Contents
 - [UIColor](UIColor)
 - [UIDynamicAnimator](UIDynamicAnimator)
 - [UIEdgeInsets](UIEdgeInsets)
+- [UIGestureRecognizer](UIGestureRecognizer)
 - [UIImage](UIImage)
 - [UIOffset](UIOffset)
 - [UIScrollView](UIScrollView)

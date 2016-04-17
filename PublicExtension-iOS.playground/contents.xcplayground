@@ -32,5 +32,6 @@
         <page name='NSRange'/>
         <page name='UIOffset'/>
         <page name='NSDateFormatter'/>
+        <page name='UIGestureRecognizer'/>
     </pages>
 </playground>
