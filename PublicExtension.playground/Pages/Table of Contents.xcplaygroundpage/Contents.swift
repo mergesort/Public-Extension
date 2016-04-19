@@ -30,6 +30,7 @@ Public Extension (iOS) Table of Contents
 - [UIGestureRecognizer](UIGestureRecognizer)
 - [UIImage](UIImage)
 - [UIOffset](UIOffset)
+- [UIFont](UIFont)
 - [UIScrollView](UIScrollView)
 - [UITableView](UITableView)
 - [UIView](UIView)
