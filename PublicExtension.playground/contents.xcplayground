@@ -34,5 +34,6 @@
         <page name='NSDateFormatter'/>
         <page name='UIGestureRecognizer'/>
         <page name='NSCache'/>
+        <page name='UIFont'/>
     </pages>
 </playground>
