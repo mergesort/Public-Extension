@@ -33,5 +33,6 @@
         <page name='UIOffset'/>
         <page name='NSDateFormatter'/>
         <page name='UIGestureRecognizer'/>
+        <page name='NSCache'/>
     </pages>
 </playground>
