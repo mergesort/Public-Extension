@@ -35,5 +35,6 @@
         <page name='UIGestureRecognizer'/>
         <page name='NSCache'/>
         <page name='UIFont'/>
+        <page name='CGRect'/>
     </pages>
 </playground>

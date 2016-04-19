@@ -5,6 +5,7 @@ Public Extension (iOS) Table of Contents
 - [AbsoluteValuable](AbsoluteValuable)
 - [Array](Array)
 - [CGSize](CGSize)
+- [CGRect](CGRect)
 - [CollectionType](CollectionType)
 - [Dictionary](Dictionary)
 - [ErrorType](ErrorType)
