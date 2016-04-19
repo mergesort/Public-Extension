@@ -88,7 +88,7 @@ extension CollectionType where
     Generator.Element: Equatable,
     Index: BidirectionalIndexType {
     
-    func intersperse(producer: () -> Generator.Element) -> [Generator.Element] {
+    func intersperse(@noescape producer: () -> Generator.Element) -> [Generator.Element] {
         return reduce([]) { accumulated, next in
             return accumulated +
                 [next] +
