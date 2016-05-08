@@ -38,5 +38,6 @@
         <page name='CGRect'/>
         <page name='Bool'/>
         <page name='NSCharacterSet'/>
+        <page name='Comparable'/>
     </pages>
 </playground>

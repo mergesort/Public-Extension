@@ -8,6 +8,7 @@ Public Extension (iOS) Table of Contents
 - [CGSize](CGSize)
 - [CGRect](CGRect)
 - [CollectionType](CollectionType)
+- [Comparable](Comparable)
 - [Dictionary](Dictionary)
 - [ErrorType](ErrorType)
 - [Int](Int)
