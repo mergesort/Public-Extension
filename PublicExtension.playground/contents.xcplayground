@@ -36,5 +36,6 @@
         <page name='NSCache'/>
         <page name='UIFont'/>
         <page name='CGRect'/>
+        <page name='Bool'/>
     </pages>
 </playground>
