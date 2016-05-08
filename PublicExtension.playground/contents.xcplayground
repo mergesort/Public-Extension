@@ -37,5 +37,6 @@
         <page name='UIFont'/>
         <page name='CGRect'/>
         <page name='Bool'/>
+        <page name='NSCharacterSet'/>
     </pages>
 </playground>
