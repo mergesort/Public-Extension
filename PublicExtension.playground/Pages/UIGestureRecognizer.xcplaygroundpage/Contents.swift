@@ -7,3 +7,11 @@ extension UIGestureRecognizer {
         recognizers.forEach(requireGestureRecognizerToFail)
     }
 }
+
+//: Credit to [@bukovinski](https://twitter.com/bukovinski)
+extension UIGestureRecognizer {
+    func cancel() {
+        enabled = false
+        enabled = true
+    }
+}
