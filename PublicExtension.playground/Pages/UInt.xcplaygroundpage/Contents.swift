@@ -2,7 +2,7 @@
 
 //: Adapted from [@kumo](https://twitter.com/kumo) and [@soffes](https://twitter.com/soffes)
 extension UInt {
-    private static let arabicRomanPairs: [(romanValue: String, arabicValue: UInt)] = [
+    private static let romanArabicPairs: [(romanValue: String, arabicValue: UInt)] = [
         (romanValue: "M", arabicValue: 1000),
         (romanValue: "CM", arabicValue: 900),
         (romanValue: "D", arabicValue: 500),
@@ -22,7 +22,7 @@ extension UInt {
         var romanValue = ""
         var startingValue = self
         
-        UInt.arabicRomanPairs.forEach { pair in
+        UInt.romanArabicPairs.forEach { pair in
             let quotient = startingValue / pair.arabicValue
             
             if quotient > 0 {
