@@ -1,7 +1,5 @@
 //: [Table of Contents](Table%20of%20Contents)
 
-import Foundation
-
 //: Adapted from [@kumo](https://twitter.com/kumo) and [@soffes](https://twitter.com/soffes)
 extension UInt {
     var romanNumeralRepresentation: String {
@@ -13,14 +11,14 @@ extension UInt {
         
         for (index, romanChar) in romanValues.enumerate() {
             let arabicValue = arabicValues[index]
-            let divisor = startingValue / arabicValue
+            let quotient = startingValue / arabicValue
             
-            if divisor > 0 {
-                (0..<divisor).forEach { _ in
+            if quotient > 0 {
+                (0..<quotient).forEach { _ in
                     romanValue += romanChar
                 }
                 
-                startingValue -= divisor*arabicValue
+                startingValue -= quotient*arabicValue
             }
         }
         
