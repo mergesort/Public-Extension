@@ -39,6 +39,5 @@
         <page name='Bool'/>
         <page name='NSCharacterSet'/>
         <page name='Comparable'/>
-        <page name='UInt'/>
     </pages>
 </playground>
