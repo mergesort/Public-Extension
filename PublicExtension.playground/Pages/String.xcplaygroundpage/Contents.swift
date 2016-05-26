@@ -64,3 +64,13 @@ extension String {
         return String(characters.reverse())
     }
 }
+
+extension String {
+    var toArray: [Character] {
+        return Array(self.characters)
+    }
+    
+    var toArrayStr: [String] {
+        return self.characters.map {String($0)}
+    }
+}
