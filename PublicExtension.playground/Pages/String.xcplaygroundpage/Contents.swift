@@ -74,3 +74,9 @@ extension String {
         return self.characters.map {String($0)}
     }
 }
+
+extension String {
+    subscript(i: Int) -> Character? {
+        return i < self.characters.count ? self[self.startIndex.advancedBy(i)] : nil
+    }
+}
