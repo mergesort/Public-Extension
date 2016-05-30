@@ -20,3 +20,10 @@ extension Range {
         )
     }
 }
+
+//: Credit to [@calebd](https://twitter.com/calebd)
+extension Range where Element.Distance == Element {
+    func advanceBy(amount: Element) -> Range<Element> {
+        return (startIndex + amount)..<(endIndex + amount)
+    }
+}

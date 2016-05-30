@@ -1,6 +1,6 @@
 # Public-Extension
 
-A weekly log of handy [@SwiftLang](https://twitter.com/swiftlang) extensions. Created by [@jasdev](https://twitter.com/jasdev).
+A log of handy [@SwiftLang](https://twitter.com/swiftlang) extensions. Created by [@jasdev](https://twitter.com/jasdev).
 
 ## Subscribe
 
