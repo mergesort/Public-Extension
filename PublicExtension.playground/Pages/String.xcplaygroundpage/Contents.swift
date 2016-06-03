@@ -64,3 +64,19 @@ extension String {
         return String(characters.reverse())
     }
 }
+
+extension String {
+    var toArray: [Character] {
+        return Array(self.characters)
+    }
+    
+    var toArrayStr: [String] {
+        return self.characters.map {String($0)}
+    }
+}
+
+extension String {
+    subscript(i: Int) -> Character? {
+        return i < self.characters.count ? self[self.startIndex.advancedBy(i)] : nil
+    }
+}
