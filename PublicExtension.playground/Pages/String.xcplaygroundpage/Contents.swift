@@ -67,16 +67,16 @@ extension String {
 
 extension String {
     var toArray: [Character] {
-        return Array(self.characters)
+        return Array(characters)
     }
     
     var toArrayStr: [String] {
-        return self.characters.map {String($0)}
+        return characters.map { String($0) }
     }
 }
 
 extension String {
     subscript(i: Int) -> Character? {
-        return i < self.characters.count ? self[self.startIndex.advancedBy(i)] : nil
+        return i < characters.count ? self[startIndex.advancedBy(i)] : nil
     }
 }
