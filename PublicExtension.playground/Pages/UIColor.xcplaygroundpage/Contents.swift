@@ -12,3 +12,14 @@ extension UIColor {
         )
     }
 }
+
+//: Credit to [@soffes](https://twitter.com/soffes)
+extension UIColor {
+    var desaturated: UIColor {
+        var hue = CGFloat(0), brightness = CGFloat(0), alpha = CGFloat(0)
+        
+        getHue(&hue, saturation: nil, brightness: &brightness, alpha: &alpha)
+        
+        return self.dynamicType.init(hue: hue, saturation: 0, brightness: brightness, alpha: alpha)
+    }
+}
