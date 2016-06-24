@@ -41,5 +41,6 @@
         <page name='Comparable'/>
         <page name='UInt'/>
         <page name='SequenceType'/>
+        <page name='UISplitViewController'/>
     </pages>
 </playground>
