@@ -11,3 +11,17 @@ extension CharacterSet {
         return allEmojiSet
     }
 }
+
+extension CharacterSet: StringLiteralConvertible {
+    public init(stringLiteral value: String) {
+        self.init(charactersIn: value)
+    }
+
+    public init(extendedGraphemeClusterLiteral value: String) {
+        self.init(charactersIn: value)
+    }
+    
+    public init(unicodeScalarLiteral value: String) {
+        self.init(charactersIn: value)
+    }
+}
