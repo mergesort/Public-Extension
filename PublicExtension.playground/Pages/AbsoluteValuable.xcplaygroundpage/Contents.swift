@@ -2,7 +2,7 @@
 
 import UIKit
 
-struct Complex: SignedNumberType {
+struct Complex: SignedNumber {
     let real: Double
     let imaginary: Double
 
@@ -40,7 +40,7 @@ func -(lhs: Complex, rhs: Complex) -> Complex {
 }
 
 extension Complex: AbsoluteValuable {
-    static func abs(x: Complex) -> Complex {
+    static func abs(_ x: Complex) -> Complex {
         return x.modulus
     }
 }

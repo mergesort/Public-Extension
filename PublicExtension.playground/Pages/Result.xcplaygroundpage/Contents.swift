@@ -1,6 +1,6 @@
 //: [Table of Contents](Table%20of%20Contents)
 
-enum Result<T, Error: ErrorType> {
+enum Result<T, Error: ErrorProtocol> {
     case Success(T)
     case Failure(Error)
     

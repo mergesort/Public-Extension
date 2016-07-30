@@ -1,7 +1,7 @@
 //: [Table of Contents](Table%20of%20Contents)
 
 // Example error scenario
-enum APIError: ErrorType {
+enum APIError: ErrorProtocol {
     case JSONParseFailed
     case MissingKey(String)
 

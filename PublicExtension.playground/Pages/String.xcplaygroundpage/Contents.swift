@@ -6,34 +6,28 @@ extension String {
     init<T>(stringInterpolationSegment expr: T?) {
         if let expr = expr {
             self = "\(expr)?"
-        } else {
+        }
+        else {
             self = "None"
         }
     }
 }
 
 extension String {
-    func parseDate(format: String = "yyyy-MM-dd") -> NSDate? {
+    func parseDate(format: String = "yyyy-MM-dd") -> Date? {
         // NSDateFormatter initialization is expensive, a shared formatter should be used for common formattings
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
 
-        formatter.timeZone = .defaultTimeZone()
+        formatter.timeZone = .`default`
         formatter.dateFormat = format
 
-        return formatter.dateFromString(self)
+        return formatter.date(from: self)
     }
 }
 
 extension String {
-    /**
-    Computes the reading time of `self`
-    
-    - parameter readingSpeed: Average reading speed in words per minute. Defaults to 250.
-     
-    - returns: Number of minutes to read `self`
-    */
     func computeReadingTime(readingSpeed: Double = 250) -> Double {
-        let words = self.componentsSeparatedByCharactersInSet(NSCharacterSet.whitespaceCharacterSet()).filter { !$0.isEmpty }
+        let words = components(separatedBy: CharacterSet.whitespaces).filter { !$0.isEmpty }
         return Double(words.count) / readingSpeed
     }
 }
@@ -55,28 +49,12 @@ extension NSString {
 
 extension String {
     var trimmedString: String {
-        return stringByTrimmingCharactersInSet(.whitespaceAndNewlineCharacterSet())
+        return trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
 
 extension String {
     var reversedString: String {
-        return String(characters.reverse())
-    }
-}
-
-extension String {
-    var toArray: [Character] {
-        return Array(characters)
-    }
-    
-    var toArrayStr: [String] {
-        return characters.map { String($0) }
-    }
-}
-
-extension String {
-    subscript(i: Int) -> Character? {
-        return i < characters.count ? self[startIndex.advancedBy(i)] : nil
+        return String(characters.reversed())
     }
 }

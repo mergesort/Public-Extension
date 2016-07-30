@@ -5,7 +5,7 @@ import UIKit
 //: Credit to [@soffes](https://twitter.com/soffes)
 extension UIFont {
     var fontWithMonospaceNumbers: UIFont {
-        let fontDescriptor = UIFontDescriptor(name: fontName, size: pointSize).fontDescriptorByAddingAttributes([
+        let fontDescriptor = UIFontDescriptor(name: fontName, size: pointSize).addingAttributes([
             UIFontDescriptorFeatureSettingsAttribute: [
                 [
                     UIFontFeatureTypeIdentifierKey: kNumberSpacingType,

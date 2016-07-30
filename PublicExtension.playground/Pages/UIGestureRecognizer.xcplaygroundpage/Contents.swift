@@ -4,14 +4,14 @@ import UIKit
 
 extension UIGestureRecognizer {
     func requireGestureRecognizersToFail(recognizers: [UIGestureRecognizer]) {
-        recognizers.forEach(requireGestureRecognizerToFail)
+        recognizers.forEach(require)
     }
 }
 
 //: Credit to [@bukovinski](https://twitter.com/bukovinski)
 extension UIGestureRecognizer {
     func cancel() {
-        enabled = false
-        enabled = true
+        isEnabled = false
+        isEnabled = true
     }
 }

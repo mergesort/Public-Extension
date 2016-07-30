@@ -2,21 +2,11 @@
 
 import Foundation
 
-extension NSDate: Comparable {}
-
-public func ==(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs === rhs || lhs.compare(rhs) == .OrderedSame
-}
-
-public func <(lhs: NSDate, rhs: NSDate) -> Bool {
-    return lhs.compare(rhs) == .OrderedAscending
-}
-
 //: Credit to [@soffes](https://twitter.com/soffes)
-extension NSDate {
+extension Date {
     var briefTimeAgoInWords: String {
-        let components = NSCalendar.currentCalendar().components(
-            [.Second, .Minute, .Hour, .Day, .Year], fromDate: self, toDate: NSDate(), options: [])
+        let components = Calendar.current.components(
+            [.second, .minute, .hour, .day, .year], from: self, to: Date(), options: [])
         
         if components.year > 0 {
             return "\(components.year)y"

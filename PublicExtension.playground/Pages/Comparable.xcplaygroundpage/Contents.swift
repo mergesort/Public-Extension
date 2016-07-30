@@ -2,11 +2,11 @@
 
 //: Credit to [@aligatr](https://twitter.com/aligatr) and [@khanlou](https://twitter.com/khanlou)
 extension Comparable {
-    func clamp(interval: ClosedInterval<Self>) -> Self {
-        return interval.clamp(self...self).start
+    func clamp(interval: ClosedRange<Self>) -> Self {
+        return interval.clamped(to: self...self).lowerBound
     }
     
-    func clamp(interval: HalfOpenInterval<Self>) -> Self {
-        return interval.clamp(self..<self).start
+    func clamp(interval: Range<Self>) -> Self {
+        return interval.clamped(to: self..<self).upperBound
     }
 }

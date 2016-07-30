@@ -2,13 +2,6 @@
 
 import UIKit
 
-/*
-
-Enum raw values must conform to `Equatable` and be literal convertible from
-“strings, characters, or any of the integer or floating-point number types.”
-
-*/
-
 //: Inspired by [@terhechte](https://twitter.com/terhechte)
 extension CGSize: StringLiteralConvertible {
     public init(stringLiteral value: String) {

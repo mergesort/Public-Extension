@@ -9,7 +9,7 @@ extension UIWindow {
 
         guard let context = UIGraphicsGetCurrentContext() else { return nil }
 
-        layer.renderInContext(context)
+        layer.render(in: context)
         return UIGraphicsGetImageFromCurrentImageContext()
     }
 }

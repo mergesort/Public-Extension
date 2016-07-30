@@ -8,11 +8,11 @@ protocol Reusable: class {
 
 extension UICollectionView {
     func registerReusable<T: Reusable>(cellClass: T.Type) {
-        registerClass(cellClass, forCellWithReuseIdentifier: cellClass.reuseIdentifier)
+        register(cellClass, forCellWithReuseIdentifier: cellClass.reuseIdentifier)
     }
 
-    func dequeueReusable<T: Reusable>(cellClass: T.Type, forIndexPath: NSIndexPath) -> T {
-        guard let cell = dequeueReusableCellWithReuseIdentifier(cellClass.reuseIdentifier, forIndexPath: forIndexPath) as? T else {
+    func dequeueReusable<T: Reusable>(cellClass: T.Type, forIndexPath: IndexPath) -> T {
+        guard let cell = dequeueReusableCell(withReuseIdentifier: cellClass.reuseIdentifier, for: forIndexPath) as? T else {
             fatalError("Misconfigured cell type, \(cellClass)!")
         }
 

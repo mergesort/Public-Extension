@@ -1,33 +1,32 @@
 /*:
 
-Public Extension (iOS) Table of Contents
+Public Extension Table of Contents
 
 - [AbsoluteValuable](AbsoluteValuable)
 - [Array](Array)
+- [BidirectionalCollection](BidirectionalCollection)
 - [Bool](Bool)
+- [Cache](Cache)
 - [CGSize](CGSize)
 - [CGRect](CGRect)
-- [CollectionType](CollectionType)
+- [CharacterSet](CharacterSet)
+- [Collection](Collection)
 - [Comparable](Comparable)
+- [CountableRange](Range)
+- [Date](Date)
+- [DateFormatter](DateFormatter)
 - [Dictionary](Dictionary)
 - [ErrorType](ErrorType)
 - [Int](Int)
+- [OperationQueue](OperationQueue)
 - [Optional](Optional)
 - [Playground%20Related](Playground%20Related)
 - [Miscellaneous](Miscellaneous)
-- [NSCache](NSCache)
-- [NSCharacterSet](NSCharacterSet)
-- [NSDate](NSDate)
-- [NSDateFormatter](NSDateFormatter)
 - [NSObject](NSObject)
-- [NSOperationQueue](NSOperationQueue)
-- [NSRange](NSRange)
-- [NSTimer](NSTimer)
-- [NSUserDefaults](NSUserDefaults)
-- [Range](Range)
 - [Result](Result)
 - [String](String)
 - [SequenceType](SequenceType)
+- [Timer](Timer)
 - [UICollectionView](UICollectionView)
 - [UIColor](UIColor)
 - [UIDynamicAnimator](UIDynamicAnimator)
@@ -41,6 +40,7 @@ Public Extension (iOS) Table of Contents
 - [UISplitViewController](UISplitViewController)
 - [UITableView](UITableView)
 - [UIView](UIView)
-- [UIWindow](UIWindow)
+- [UIWindow](UIWindow
+- [UserDefaults](UserDefaults))
 
 */

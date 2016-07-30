@@ -4,7 +4,7 @@ import UIKit
 
 extension UIOffset: ArrayLiteralConvertible {
     public init(arrayLiteral elements: CGFloat...) {
-        guard elements.count == 2 else { fatalError("2 CGFloats required!") }
+        guard elements.count == 2 else { fatalError("2 `CGFloat`s required!") }
         
         horizontal = elements[0]
         vertical = elements[1]

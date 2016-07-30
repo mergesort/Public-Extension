@@ -2,7 +2,7 @@
 
 import UIKit
 
-func apply<T, U>(transform: inout T -> U -> ()) -> T -> U -> T {
+func apply<T, U>(_ transform: (inout T) -> (U) -> Void) -> (T) -> (U) -> T {
     return { a in
         { b in
             var c = a
@@ -13,28 +13,28 @@ func apply<T, U>(transform: inout T -> U -> ()) -> T -> U -> T {
 }
 
 protocol SomeProtocol {
-    associatedtype Container: SequenceType
+    associatedtype Container: Sequence
 }
 
 extension SomeProtocol {
-    typealias Element = Container.Generator.Element
+    typealias Element = Container.Iterator.Element
 }
 
-func fatalError<T: protocol<CustomStringConvertible, ErrorType>>(error: T) {
+func fatalError<T: protocol<CustomStringConvertible, ErrorProtocol>>(error: T) {
     fatalError(error.description)
 }
 
 //: Credit to [@sandofsky](https://twitter.com/sandofsky)
 protocol StoryboardBacked: class {
-    static func newFromStoryboardWithName(name: String?, bundle: NSBundle?) -> Self
+    static func newFromStoryboardWithName(name: String?, bundle: Bundle?) -> Self
 }
 
 extension StoryboardBacked {
-    static func newFromStoryboardWithName(name: String? = nil, bundle: NSBundle? = nil) -> Self {
+    static func newFromStoryboardWithName(name: String? = nil, bundle: Bundle? = nil) -> Self {
         guard
-            let controller = UIStoryboard(name: name ?? String(Self), bundle: bundle).instantiateInitialViewController() as? Self
-        else {
-            fatalError("Misconfigured storyboard!")
+            let controller = UIStoryboard(name: name ?? String(Self.self), bundle: bundle).instantiateInitialViewController() as? Self
+            else {
+                fatalError("Misconfigured storyboard!")
         }
         
         return controller

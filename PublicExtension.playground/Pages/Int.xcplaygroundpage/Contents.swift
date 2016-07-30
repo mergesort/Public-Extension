@@ -11,7 +11,7 @@ extension Int {
 
     // MARK: - Random `Int` in specific bounds
     //: From the QuickCheck chapter in [Functional Programming in Swift](https://www.objc.io/books/fpinswift/)!
-    static func random(from from: Int, to: Int) -> Int {
+    static func random(from: Int, to: Int) -> Int {
         return from + Int(arc4random_uniform(UInt32(to - from)))
     }
 
@@ -24,6 +24,6 @@ extension Int {
     func gcd(other: Int) -> Int {
         guard other != 0 else { return abs(self) }
 
-        return abs(other.gcd(self % other))
+        return abs(other.gcd(other: self % other))
     }
 }

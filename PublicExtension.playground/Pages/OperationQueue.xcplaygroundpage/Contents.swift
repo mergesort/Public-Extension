@@ -2,8 +2,8 @@
 
 import Foundation
 
-extension NSOperationQueue {
-    func addOperations(operations: [NSOperation]) {
+extension OperationQueue {
+    func addOperations(operations: [Operation]) {
         operations.forEach(addOperation)
     }
 }
