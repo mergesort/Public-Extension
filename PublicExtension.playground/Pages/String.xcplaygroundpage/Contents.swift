@@ -58,3 +58,60 @@ extension String {
         return String(characters.reversed())
     }
 }
+
+//: Credit to [@ndis1](https://github.com/ndis1)
+extension String {
+    private var qrImage: CIImage? {
+        let textData = data(using: .isoLatin1, allowLossyConversion: false)
+        let filter = CIFilter(name: "CIQRCodeGenerator")
+        
+        filter?.setValue(textData, forKey: "inputMessage")
+        filter?.setValue("Q", forKey: "inputCorrectionLevel")
+        
+        return filter?.outputImage
+    }
+    
+    func qrImage(withSize size: CGSize,
+                 foregroundColor: UIColor = .black(),
+                 backgroundColor: UIColor = .white()) -> UIImage? {
+        
+        return qrImage?.scaledWithSize(size)
+                    .colored(withForegroundColor: foregroundColor,
+                             backgroundColor: backgroundColor)?.uiImage
+    }
+}
+
+private extension CIImage {
+    var uiImage: UIImage? {
+        return UIImage(ciImage: self)
+    }
+    
+    func scaledWithSize(_ size: CGSize) -> CIImage {
+        let scaleX = size.width / extent.size.width
+        let scaleY = size.height / extent.size.height
+        
+        return applying(CGAffineTransform(scaleX: scaleX, y: scaleY))
+    }
+    
+    func colored(withForegroundColor foregroundColor: UIColor, backgroundColor: UIColor) -> CIImage? {
+        let foregroundCoreColor = CIColor(uiColor: foregroundColor)
+        let backgroundCoreColor = CIColor(uiColor: backgroundColor)
+        
+        let colorFilter = CIFilter(name: "CIFalseColor", withInputParameters: [
+            "inputImage": self,
+            "inputColor0":foregroundCoreColor,
+            "inputColor1":backgroundCoreColor
+        ])
+        
+        return colorFilter?.outputImage
+    }
+}
+
+private extension CIColor {
+    convenience init(uiColor: UIColor) {
+        let foregroundColorRef = uiColor.cgColor
+        let foregroundColorString = CIColor(cgColor: foregroundColorRef).stringRepresentation
+        
+        self.init(string: foregroundColorString)
+    }
+}
