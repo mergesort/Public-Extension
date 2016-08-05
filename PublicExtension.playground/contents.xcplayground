@@ -42,5 +42,6 @@
         <page name='SequenceType'/>
         <page name='UISplitViewController'/>
         <page name='BidirectionalCollection'/>
+        <page name='StringLiteralConvertible'/>
     </pages>
 </playground>

@@ -26,6 +26,7 @@ Public Extension Table of Contents
 - [Result](Result)
 - [String](String)
 - [SequenceType](SequenceType)
+- [StringLiteralConvertible](StringLiteralConvertible)
 - [Timer](Timer)
 - [UICollectionView](UICollectionView)
 - [UIColor](UIColor)
