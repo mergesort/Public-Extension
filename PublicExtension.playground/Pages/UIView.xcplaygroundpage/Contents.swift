@@ -51,3 +51,10 @@ extension UIView {
         return UIView.userInterfaceLayoutDirection(for: semanticContentAttribute) == .rightToLeft
     }
 }
+
+//: Credit to [@JPMcGlone](https://twitter.com/JPMcGlone)
+extension UIView {
+    func removeAllGestureRecognizers() {
+        gestureRecognizers?.forEach(removeGestureRecognizer)
+    }
+}
