@@ -27,3 +27,14 @@ extension Date {
         return "\(components.second)s"
     }
 }
+
+//: Credit to [@ericasadun](https://twitter.com/ericasadun)
+extension Date {
+    private static var now: Date { return Date(timeIntervalSinceNow: 0) }
+    
+    var isPast: Bool { return self < Date.now }
+    var isFuture: Bool { return self > Date.now }
+    
+    // More at https://github.com/erica/NSDate-Extensions
+}
+
