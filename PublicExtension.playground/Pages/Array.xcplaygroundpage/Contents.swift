@@ -43,3 +43,12 @@ extension Array where Element: FloatingPointType {
         return reduce(0, combine: +) / Double(count)
     }
 }
+
+//: Credit to [@JPMcGlone](https://twitter.com/JPMcGlone)
+extension Array {
+    mutating func prepend(_ newElement: Element) {
+        insert(newElement, at: 0)
+    }
+}
+
+
