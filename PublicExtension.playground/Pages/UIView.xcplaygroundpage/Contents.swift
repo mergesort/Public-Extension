@@ -45,3 +45,9 @@ extension UIView {
         return viewWithTag(tag.rawValue)
     }
 }
+
+extension UIView {
+    var isRTL: Bool {
+        return UIView.userInterfaceLayoutDirection(for: semanticContentAttribute) == .rightToLeft
+    }
+}
