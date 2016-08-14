@@ -115,3 +115,12 @@ private extension CIColor {
         self.init(string: foregroundColorString)
     }
 }
+
+extension String {
+    var initials: String {
+        return components(separatedBy: .whitespaces)
+            .flatMap { $0.characters.first }
+            .map { String.init($0).uppercased() }
+            .joined(separator: "")
+    }
+}
