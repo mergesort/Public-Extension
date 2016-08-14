@@ -94,3 +94,24 @@ extension Collection
         return nil
     }
 }
+
+//: Credit to [@ericasadun](https://twitter.com/ericasadun)
+extension Collection where Iterator.Element: Comparable, Index: Integer {
+    func element(after element: Iterator.Element) -> Iterator.Element? {
+        guard let
+            idx = index(of: element),
+            index(idx, offsetBy: 1) < endIndex
+        else { return nil }
+        
+        return self[idx + 1]
+    }
+    
+    func element(before element: Iterator.Element) -> Iterator.Element? {
+        guard let
+            idx = index(of: element),
+            index(idx, offsetBy: -1) >= startIndex
+        else { return nil }
+        
+        return self[idx - 1]
+    }
+}
