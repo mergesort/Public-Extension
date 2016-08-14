@@ -50,5 +50,3 @@ extension Array {
         insert(newElement, at: 0)
     }
 }
-
-
