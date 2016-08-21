@@ -12,7 +12,7 @@ extension CharacterSet {
     }
 }
 
-extension CharacterSet: StringLiteralConvertible {
+extension CharacterSet: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
         self.init(charactersIn: value)
     }

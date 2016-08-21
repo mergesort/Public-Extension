@@ -41,6 +41,10 @@ extension UITableView {
     private struct IndexPathSequence: Sequence {
         private let tableView: UITableView
         
+        fileprivate init(tableView: UITableView) {
+            self.tableView = tableView
+        }
+        
         func makeIterator() -> AnyIterator<IndexPath> {
             var (section, row) = (0, 0)
             

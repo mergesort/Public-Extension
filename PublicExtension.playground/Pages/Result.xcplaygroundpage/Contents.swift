@@ -1,8 +1,8 @@
 //: [Table of Contents](Table%20of%20Contents)
 
-enum Result<T, Error: ErrorProtocol> {
+enum Result<T, ErrorProtocol: Error> {
     case Success(T)
-    case Failure(Error)
+    case Failure(ErrorProtocol)
     
     // See full implementation at https://github.com/antitypical/Result
 }

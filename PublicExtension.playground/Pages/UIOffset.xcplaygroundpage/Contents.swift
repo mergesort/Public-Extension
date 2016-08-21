@@ -2,7 +2,7 @@
 
 import UIKit
 
-extension UIOffset: ArrayLiteralConvertible {
+extension UIOffset: ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: CGFloat...) {
         guard elements.count == 2 else { fatalError("2 `CGFloat`s required!") }
         

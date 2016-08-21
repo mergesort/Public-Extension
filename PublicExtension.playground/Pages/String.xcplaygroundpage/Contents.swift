@@ -18,7 +18,7 @@ extension String {
         // NSDateFormatter initialization is expensive, a shared formatter should be used for common formattings
         let formatter = DateFormatter()
 
-        formatter.timeZone = .`default`
+        formatter.timeZone = .current
         formatter.dateFormat = format
 
         return formatter.date(from: self)
@@ -72,8 +72,8 @@ extension String {
     }
     
     func qrImage(withSize size: CGSize,
-                 foregroundColor: UIColor = .black(),
-                 backgroundColor: UIColor = .white()) -> UIImage? {
+                 foregroundColor: UIColor = .black,
+                 backgroundColor: UIColor = .white) -> UIImage? {
         
         return qrImage?.scaledWithSize(size)
                     .colored(withForegroundColor: foregroundColor,

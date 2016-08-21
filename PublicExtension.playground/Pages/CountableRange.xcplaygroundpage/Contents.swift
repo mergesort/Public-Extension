@@ -28,7 +28,7 @@ extension CountableRange where Bound.Stride == Bound {
     }
 }
 
-extension IndexPath: StringLiteralConvertible {
+extension IndexPath: ExpressibleByStringLiteral {
     public init(stringLiteral: String) {
         let components = stringLiteral.components(separatedBy: CharacterSet(charactersIn: ",")).flatMap { Int($0, radix: 10) }
         self.init(row: components[0], section: components[1])

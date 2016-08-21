@@ -31,7 +31,7 @@ enum ViewTag: Int {
 
 //: Credit to [@rolandleth](https://twitter.com/rolandleth)
 extension UIView {
-    var tag: ViewTag {
+    var safeTag: ViewTag {
         get {
             return ViewTag(rawValue: tag) ?? .None
         }

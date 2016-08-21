@@ -10,13 +10,13 @@ func +<U, V>(lhs: [U: V], rhs: [U: V]) -> [U: V] {
 }
 
 extension Dictionary {
-    func map<T>(transform: @noescape (Value) -> T) -> [Key: T] {
+    func map<T>(transform: (Value) -> T) -> [Key: T] {
         return reduce([:]) {
             $0 + [$1.0: transform($1.1)]
         }
     }
     
-    func groupBy<T>(groupBy: @noescape (Key, Value) -> T) -> [T: [Value]] {
+    func groupBy<T>(groupBy: (Key, Value) -> T) -> [T: [Value]] {
         var result: [T: [Value]] = [:]
         
         forEach {

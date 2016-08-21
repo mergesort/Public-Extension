@@ -20,6 +20,6 @@ extension UIColor {
         
         getHue(&hue, saturation: nil, brightness: &brightness, alpha: &alpha)
         
-        return self.dynamicType.init(hue: hue, saturation: 0, brightness: brightness, alpha: alpha)
+        return type(of: self).init(hue: hue, saturation: 0, brightness: brightness, alpha: alpha)
     }
 }

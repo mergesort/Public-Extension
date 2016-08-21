@@ -5,22 +5,21 @@ import Foundation
 //: Credit to [@soffes](https://twitter.com/soffes)
 extension Date {
     var briefTimeAgoInWords: String {
-        let components = Calendar.current.components(
-            [.second, .minute, .hour, .day, .year], from: self, to: Date(), options: [])
+        let components = Calendar.current.dateComponents([.second, .minute, .hour, .day, .year], from: self, to: Date())
         
-        if components.year > 0 {
+        if let year = components.year, year > 0 {
             return "\(components.year)y"
         }
         
-        if components.day > 0 {
+        if let day = components.day, day > 0 {
             return "\(components.day)d"
         }
         
-        if components.hour > 0 {
+        if let hour = components.hour, hour > 0 {
             return "\(components.hour)h"
         }
         
-        if components.minute > 0 {
+        if let minute = components.minute, minute > 0 {
             return "\(components.minute)m"
         }
         

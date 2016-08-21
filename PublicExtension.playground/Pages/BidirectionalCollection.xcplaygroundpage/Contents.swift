@@ -4,7 +4,7 @@
 extension BidirectionalCollection where
     Iterator.Element: Equatable {
     
-    func intersperse(producer: @noescape () -> Iterator.Element) -> [Iterator.Element] {
+    func intersperse(producer: () -> Iterator.Element) -> [Iterator.Element] {
         return reduce([]) { accumulated, next in
             return accumulated +
                 [next] +

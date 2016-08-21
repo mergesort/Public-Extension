@@ -3,7 +3,7 @@
 import UIKit
 
 //: Inspired by [@terhechte](https://twitter.com/terhechte)
-extension CGSize: StringLiteralConvertible {
+extension CGSize: ExpressibleByStringLiteral {
     public init(stringLiteral value: String) {
         let size = CGSizeFromString(value)
         self.init(width: size.width, height: size.height)

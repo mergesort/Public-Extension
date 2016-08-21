@@ -40,7 +40,7 @@ func +(lhs: FloatingPointType, rhs: FloatingPointType) -> Double {
 extension Array where Element: FloatingPointType {
     func computeAverage() -> Double? {
         guard !isEmpty else { return nil }
-        return reduce(0, combine: +) / Double(count)
+        return reduce(0, +) / Double(count)
     }
 }
 

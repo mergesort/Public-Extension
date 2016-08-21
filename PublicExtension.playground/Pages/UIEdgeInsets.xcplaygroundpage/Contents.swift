@@ -2,7 +2,7 @@
 
 import UIKit
 
-extension UIEdgeInsets: ArrayLiteralConvertible {
+extension UIEdgeInsets: ExpressibleByArrayLiteral {
     public init(arrayLiteral elements: CGFloat...) {
         guard elements.count == 4 else { fatalError("4 `CGFloat`s required!") }
 

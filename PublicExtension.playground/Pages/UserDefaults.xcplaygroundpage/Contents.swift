@@ -14,7 +14,7 @@ extension UserDefaults {
 }
 
 extension UserDefaults {
-    @nonobjc subscript(key: String) -> AnyObject? {
+    @nonobjc subscript(key: String) -> Any? {
         get {
             return object(forKey: key)
         }

@@ -2,7 +2,7 @@
 
 import UIKit
 
-func apply<T, U>(_ transform: (inout T) -> (U) -> Void) -> (T) -> (U) -> T {
+func apply<T, U>(_ transform: @escaping (inout T) -> (U) -> Void) -> (T) -> (U) -> T {
     return { a in
         { b in
             var c = a
@@ -20,7 +20,7 @@ extension SomeProtocol {
     typealias Element = Container.Iterator.Element
 }
 
-func fatalError<T: protocol<CustomStringConvertible, ErrorProtocol>>(error: T) {
+func fatalError<T: CustomStringConvertible & Error>(error: T) {
     fatalError(error.description)
 }
 
@@ -32,7 +32,7 @@ protocol StoryboardBacked: class {
 extension StoryboardBacked {
     static func newFromStoryboardWithName(name: String? = nil, bundle: Bundle? = nil) -> Self {
         guard
-            let controller = UIStoryboard(name: name ?? String(Self.self), bundle: bundle).instantiateInitialViewController() as? Self
+            let controller = UIStoryboard(name: name ?? String(describing: Self.self), bundle: bundle).instantiateInitialViewController() as? Self
             else {
                 fatalError("Misconfigured storyboard!")
         }

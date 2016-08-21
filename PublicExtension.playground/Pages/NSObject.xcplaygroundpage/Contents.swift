@@ -8,7 +8,7 @@ protocol Then {}
 extension NSObject: Then {}
 
 extension Then {
-    func then(block: @noescape (Self) -> Void) -> Self {
+    func then(block: (Self) -> Void) -> Self {
         block(self)
         return self
     }
