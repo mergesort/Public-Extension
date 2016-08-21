@@ -29,10 +29,8 @@ extension Date {
 
 //: Credit to [@ericasadun](https://twitter.com/ericasadun)
 extension Date {
-    private static var now: Date { return Date(timeIntervalSinceNow: 0) }
-    
-    var isPast: Bool { return self < Date.now }
-    var isFuture: Bool { return self > Date.now }
+    var isPast: Bool { return self < Date() }
+    var isFuture: Bool { return self > Date() }
     
     // More at https://github.com/erica/NSDate-Extensions
 }
