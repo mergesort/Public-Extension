@@ -43,5 +43,6 @@
         <page name='UISplitViewController'/>
         <page name='BidirectionalCollection'/>
         <page name='StringLiteralConvertible'/>
+        <page name='UIAlertController'/>
     </pages>
 </playground>

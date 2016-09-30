@@ -28,6 +28,7 @@ Public Extension Table of Contents
 - [SequenceType](SequenceType)
 - [StringLiteralConvertible](StringLiteralConvertible)
 - [Timer](Timer)
+- [UIAlertController](UIAlertController)
 - [UICollectionView](UICollectionView)
 - [UIColor](UIColor)
 - [UIDynamicAnimator](UIDynamicAnimator)
