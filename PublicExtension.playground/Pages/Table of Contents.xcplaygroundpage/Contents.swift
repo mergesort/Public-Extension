@@ -43,6 +43,7 @@ Public Extension Table of Contents
 - [UITableView](UITableView)
 - [UIView](UIView)
 - [UIWindow](UIWindow
-- [UserDefaults](UserDefaults))
+- [UnicodeScalar](UnicodeScalar)
+- [UserDefaults](UserDefaults)
 
 */

@@ -44,5 +44,6 @@
         <page name='BidirectionalCollection'/>
         <page name='StringLiteralConvertible'/>
         <page name='UIAlertController'/>
+        <page name='UnicodeScalar'/>
     </pages>
 </playground>
