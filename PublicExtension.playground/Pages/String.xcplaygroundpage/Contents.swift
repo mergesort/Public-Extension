@@ -124,3 +124,23 @@ extension String {
             .joined(separator: "")
     }
 }
+
+//: Credit to [@olebegemann](https://twitter.com/olebegemann)
+extension String {
+    func wrapped(after: Int = 70) -> String {
+        var i = 0
+        
+        return characters.split(omittingEmptySubsequences: false) { character in
+            switch character {
+            case "\n",
+                 " " where i >= after:
+                i = 0
+                return true
+            default:
+                i += 1
+                return false
+            }
+        }.map(String.init)
+        .joined(separator: "\n")
+    }
+}
