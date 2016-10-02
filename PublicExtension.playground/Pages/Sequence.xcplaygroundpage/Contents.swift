@@ -4,11 +4,11 @@
 extension Sequence where Iterator.Element: Hashable {
     var uniques: AnySequence<Iterator.Element> {
         var seen = Set<Iterator.Element>()
-        var underlyingGenerator = makeIterator()
+        var underlyingIterator = makeIterator()
         
         return AnySequence {
             AnyIterator {
-                while let next = underlyingGenerator.next() {
+                while let next = underlyingIterator.next() {
                     if !seen.contains(next) {
                         seen.insert(next)
                         
