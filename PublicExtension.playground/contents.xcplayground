@@ -39,7 +39,7 @@
         <page name='CharacterSet'/>
         <page name='Comparable'/>
         <page name='UInt'/>
-        <page name='SequenceType'/>
+        <page name='Sequence'/>
         <page name='UISplitViewController'/>
         <page name='BidirectionalCollection'/>
         <page name='StringLiteralConvertible'/>

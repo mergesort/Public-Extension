@@ -25,7 +25,7 @@ Public Extension Table of Contents
 - [NSObject](NSObject)
 - [Result](Result)
 - [String](String)
-- [SequenceType](SequenceType)
+- [Sequence](Sequence)
 - [StringLiteralConvertible](StringLiteralConvertible)
 - [Timer](Timer)
 - [UIAlertController](UIAlertController)
