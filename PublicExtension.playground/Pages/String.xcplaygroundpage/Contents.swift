@@ -144,3 +144,16 @@ extension String {
         .joined(separator: "\n")
     }
 }
+
+//: Credit to [@terhechte](https://twitter.com/terhechte)
+extension String {
+    /// - Complexity: Θ(*n*), where *n* is the number of Unicode scalars backing `self`
+    subscript(start: UInt, length: UInt) -> String? {
+        guard
+            let start = index(startIndex, offsetBy: Int(start), limitedBy: endIndex),
+            let end = index(start, offsetBy: Int(length), limitedBy: endIndex)
+        else { return nil }
+        
+        return substring(with: start..<end)
+    }
+}
