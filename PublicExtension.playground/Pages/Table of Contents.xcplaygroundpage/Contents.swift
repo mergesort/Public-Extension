@@ -23,6 +23,7 @@ Public Extension Table of Contents
 - [Playground%20Related](Playground%20Related)
 - [Miscellaneous](Miscellaneous)
 - [NSObject](NSObject)
+- [RandomAccessCollection](RandomAccessCollection)
 - [Result](Result)
 - [String](String)
 - [Sequence](Sequence)

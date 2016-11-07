@@ -45,5 +45,6 @@
         <page name='StringLiteralConvertible'/>
         <page name='UIAlertController'/>
         <page name='UnicodeScalar'/>
+        <page name='RandomAccessCollection'/>
     </pages>
 </playground>
