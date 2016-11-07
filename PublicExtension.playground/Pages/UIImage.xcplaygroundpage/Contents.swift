@@ -8,20 +8,12 @@ extension UIImage {
     }
 }
 
-//: Credit to [@mergesort](https://twitter.com/mergesort)
+//: Credit to [@mergesort](https://twitter.com/mergesort) and [@khanlou](https://twitter.com/khanlou)
 extension UIImage {
-    static func image(fromColor color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage? {
-        let rect = CGRect(x: 0, y: 0, width: size.height, height: size.height)
-        
-        UIGraphicsBeginImageContext(rect.size)
-        
-        defer { UIGraphicsEndImageContext() }
-        
-        guard let context = UIGraphicsGetCurrentContext() else { return nil }
-        
-        context.setFillColor(color.cgColor)
-        context.fill(rect)
-        
-        return UIGraphicsGetImageFromCurrentImageContext()
+    static func image(from color: UIColor, size: CGSize = CGSize(width: 1, height: 1)) -> UIImage {
+        return UIGraphicsImageRenderer(size: size).image {
+            $0.cgContext.setFillColor(color.cgColor)
+            $0.cgContext.fill(CGRect(origin: .zero, size: size))
+        }
     }
 }
