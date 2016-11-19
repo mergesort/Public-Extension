@@ -17,7 +17,7 @@ extension Optional where Wrapped: Container {
 
 //: Credit to [@pearapps](https://twitter.com/pearapps)
 extension Optional {
-    func iff(f: (Wrapped) -> Void) {
+    func iff(_ f: (Wrapped) -> Void) {
         switch self {
         case let .some(value):
             f(value)
