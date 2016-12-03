@@ -157,3 +157,16 @@ extension String {
         return substring(with: start..<end)
     }
 }
+
+//: Credit to [@ayanonagon](https://twitter.com/ayanonagon)
+extension String {
+    /// - Complexity: Θ(*n*), where *n* is the number of Unicode scalars backing `self`
+    /// - Note: This implementation strips out everything but alphanumerics, but can be modified for your desired behavior!
+    var s_n_a_k_e_c_a_s_e_d: String { // 😝
+        var charactersToRemove = CharacterSet.alphanumerics.inverted
+        charactersToRemove.remove(charactersIn: " ")
+
+        let result = components(separatedBy: charactersToRemove).joined(separator: "")
+        return result.replacingOccurrences(of: " ", with: "_").lowercased()
+    }
+}
