@@ -46,5 +46,6 @@
         <page name='UIAlertController'/>
         <page name='UnicodeScalar'/>
         <page name='RandomAccessCollection'/>
+        <page name='FloatingPoint'/>
     </pages>
 </playground>

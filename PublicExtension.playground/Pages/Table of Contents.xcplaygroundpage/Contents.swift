@@ -17,6 +17,7 @@ Public Extension Table of Contents
 - [DateFormatter](DateFormatter)
 - [Dictionary](Dictionary)
 - [ErrorType](ErrorType)
+- [FloatingPoint](FloatingPoint)
 - [Int](Int)
 - [OperationQueue](OperationQueue)
 - [Optional](Optional)
