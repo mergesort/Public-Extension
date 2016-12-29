@@ -5,10 +5,8 @@ extension BidirectionalCollection where
     Iterator.Element: Equatable {
     
     func intersperse(producer: () -> Iterator.Element) -> [Iterator.Element] {
-        return reduce([]) { accumulated, next in
-            return accumulated +
-                [next] +
-                (next != last! ? [producer()] : [])
-        }
+        var result = flatMap({ return [$0, producer()] })
+        result.popLast()
+        return result
     }
 }
