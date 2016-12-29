@@ -4,7 +4,7 @@
 extension BidirectionalCollection where
     Iterator.Element: Equatable {
     
-    func intersperse(producer: () -> Iterator.Element) -> [Iterator.Element] {
+    func intersperse(producer: @autoclosure() -> Iterator.Element) -> [Iterator.Element] {
         var result = flatMap({ return [$0, producer()] })
         result.popLast()
         return result
