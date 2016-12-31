@@ -4,7 +4,7 @@ import UIKit
 
 extension Array {
     subscript(safe index: Index) -> Element? {
-        return index < endIndex ? self[index] : nil
+        return index < endIndex && index >= startIndex ? self[index] : nil
     }
 
     init(withCapacity capacity: Int) {
