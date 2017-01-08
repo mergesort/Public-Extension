@@ -118,3 +118,29 @@ extension Collection where Iterator.Element: Comparable, Index: Integer {
         return self[idx - 1]
     }
 }
+
+//: Credit to [@aciidb0mb3r](https://twitter.com/aciidb0mb3r)
+extension Collection {
+
+    /// Creates a partition of `self`, represented by a tuple of arrays where members of the first component
+    /// matches `predicate` and the second contains elements that do not.
+    ///
+    /// - Parameter predicate: The condition on which to partition `self
+    /// - Returns: Tuple representing the split. The first component contains matches and the second
+    ///            contains nonmatches.
+    func partition(_ predicate: (Iterator.Element) -> Bool) -> ([Iterator.Element], [Iterator.Element]) {
+        var matching: [Iterator.Element] = []
+        var nonMatching: [Iterator.Element] = []
+
+        forEach {
+            if predicate($0) {
+                matching.append($0)
+            }
+            else {
+                nonMatching.append($0)
+            }
+        }
+        
+        return (matching, nonMatching)
+    }
+}
