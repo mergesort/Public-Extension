@@ -23,3 +23,23 @@ extension UIColor {
         return type(of: self).init(hue: hue, saturation: 0, brightness: brightness, alpha: alpha)
     }
 }
+
+//: Credit to [@thillisman](https://twitter.com/thillsman)
+extension UIColor {
+    convenience init(blending first: UIColor, with second: UIColor, ratio: CGFloat) {
+        func blendComponent(from firstValue: CGFloat, to secondValue: CGFloat) -> CGFloat {
+            let diff = secondValue - firstValue
+            return diff * ratio + firstValue
+        }
+
+        let firstCIColor = CIColor(color: first)
+        let secondCIColor = CIColor(color: second)
+
+        let red = blendComponent(from: firstCIColor.red, to: secondCIColor.red)
+        let green = blendComponent(from: firstCIColor.green, to: secondCIColor.green)
+        let blue = blendComponent(from: firstCIColor.blue, to: secondCIColor.blue)
+        let alpha = blendComponent(from: firstCIColor.alpha, to: secondCIColor.alpha)
+
+        self.init(red: red, green: green, blue: blue, alpha: alpha)
+    }
+}
