@@ -18,6 +18,7 @@ Public Extension Table of Contents
 - [Dictionary](Dictionary)
 - [ErrorType](ErrorType)
 - [FloatingPoint](FloatingPoint)
+- [IndicesSubscript](IndicesSubscript)
 - [Int](Int)
 - [OperationQueue](OperationQueue)
 - [Optional](Optional)
@@ -44,7 +45,7 @@ Public Extension Table of Contents
 - [UISplitViewController](UISplitViewController)
 - [UITableView](UITableView)
 - [UIView](UIView)
-- [UIWindow](UIWindow
+- [UIWindow](UIWindow)
 - [UnicodeScalar](UnicodeScalar)
 - [UserDefaults](UserDefaults)
 
