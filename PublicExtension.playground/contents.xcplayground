@@ -11,6 +11,7 @@
         <page name='UIDynamicAnimator'/>
         <page name='UIView'/>
         <page name='UITableView'/>
+        <page name='IndicesSubscript'/>
         <page name='Int'/>
         <page name='UIImage'/>
         <page name='CGSize'/>
@@ -47,6 +48,5 @@
         <page name='UnicodeScalar'/>
         <page name='RandomAccessCollection'/>
         <page name='FloatingPoint'/>
-        <page name='IndicesSubscript'/>
     </pages>
 </playground>
