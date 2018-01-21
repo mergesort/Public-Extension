@@ -24,7 +24,7 @@ extension UIColor {
     }
 }
 
-//: Credit to [@thillisman](https://twitter.com/thillsman)
+//: Credit to [@thillsman](https://twitter.com/thillsman)
 extension UIColor {
     convenience init(blending first: UIColor, with second: UIColor, ratio: CGFloat) {
         func blendComponent(from firstValue: CGFloat, to secondValue: CGFloat) -> CGFloat {
