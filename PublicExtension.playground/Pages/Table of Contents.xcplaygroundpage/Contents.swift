@@ -18,7 +18,6 @@ Public Extension Table of Contents
 - [Dictionary](Dictionary)
 - [ErrorType](ErrorType)
 - [FloatingPoint](FloatingPoint)
-- [IndicesSubscript](IndicesSubscript)
 - [Int](Int)
 - [OperationQueue](OperationQueue)
 - [Optional](Optional)
