@@ -99,7 +99,7 @@ extension Collection
 }
 
 //: Credit to [@ericasadun](https://twitter.com/ericasadun)
-extension Collection where Iterator.Element: Comparable, Index: Integer {
+extension Collection where Iterator.Element: Comparable, Index: BinaryInteger {
     func element(after element: Iterator.Element) -> Iterator.Element? {
         guard let
             idx = index(of: element),
@@ -142,5 +142,13 @@ extension Collection {
         }
         
         return (matching, nonMatching)
+    }
+}
+
+//: Credit to [@iosartem](http://twitter.com/iosartem)
+extension Collection {
+
+    subscript(indices: [Index]) -> [Element] {
+        return indices.map { self[$0] }
     }
 }
