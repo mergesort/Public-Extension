@@ -44,6 +44,7 @@ Public Extension Table of Contents
 - [UISplitViewController](UISplitViewController)
 - [UITableView](UITableView)
 - [UIView](UIView)
+- [UIViewController](UIViewController)
 - [UIWindow](UIWindow)
 - [UnicodeScalar](UnicodeScalar)
 - [UserDefaults](UserDefaults)
