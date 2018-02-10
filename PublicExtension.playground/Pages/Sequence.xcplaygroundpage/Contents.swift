@@ -21,3 +21,21 @@ extension Sequence where Iterator.Element: Hashable {
         }
     }
 }
+
+//: Credit to [@khanlou](https://twitter.com/khanlou)
+extension Sequence where SubSequence: Sequence, SubSequence.Iterator.Element == Iterator.Element {
+
+    typealias Pair = (Element, Element)
+
+    func consecutivePairs() -> AnySequence<Pair> {
+        var iterator = self.makeIterator()
+        guard var previous = iterator.next() else { return AnySequence([]) }
+        return AnySequence({ () -> AnyIterator<Pair> in
+            return AnyIterator({
+                guard let next = iterator.next() else { return nil }
+                defer { previous = next }
+                return (previous, next)
+            })
+        })
+    }
+}
