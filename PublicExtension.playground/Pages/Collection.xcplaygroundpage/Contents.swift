@@ -145,10 +145,11 @@ extension Collection {
     }
 }
 
-//: Credit to [@iosartem](http://twitter.com/iosartem)
+//: Credit to [@iosartem](http://twitter.com/iosartem) and updated by [@rolandleth](https://twitter.com/rolandleth/status/961850126883958785)
 extension Collection {
 
-    subscript(indices: [Index]) -> [Element] {
+    subscript(indices: Index...) -> [Element] {
         return indices.map { self[$0] }
     }
 }
+
