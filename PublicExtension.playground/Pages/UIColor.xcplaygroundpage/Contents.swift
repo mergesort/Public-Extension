@@ -44,6 +44,13 @@ extension UIColor {
     }
 }
 
+extension UIColor {
+    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+        let color = CIColor(color: self)
+        return (color.red, color.green, color.blue, color.alpha)
+    }
+}
+
 // Credit to [@jasdev](https://twitter.com/jasdev)
 extension Collection where Element == UIColor {
   var cgColors: [CGColor] { return map { $0.cgColor } }
