@@ -44,6 +44,7 @@ extension UIColor {
     }
 }
 
+//: Credit to [@thillsman](https://twitter.com/thillsman)
 extension UIColor {
     var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
         let color = CIColor(color: self)
