@@ -43,3 +43,8 @@ extension UIColor {
         self.init(red: red, green: green, blue: blue, alpha: alpha)
     }
 }
+
+// Credit to [@jasdev](https://twitter.com/jasdev)
+extension Collection where Element == UIColor {
+  var cgColors: [CGColor] { return map { $0.cgColor } }
+}
