@@ -50,3 +50,23 @@ extension Array {
         insert(newElement, at: 0)
     }
 }
+
+extension Array {
+    mutating func shuffle() {
+        // Empty and single-element collections don't shuffle
+        guard count > 1 else { return }
+        
+        for i in startIndex ..< endIndex - 1 {
+            let j = Int(arc4random_uniform(UInt32(endIndex - i))) + i
+            if i != j {
+                self.swapAt(i, j)
+            }
+        }
+    }
+
+    func shuffled() -> [Element] {
+        var shuffledArray = self
+        shuffledArray.shuffle()
+        return shuffledArray
+    }
+}
